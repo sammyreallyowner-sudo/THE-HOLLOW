@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+}
+
+group = 'com.example.thehollow'
+version = '1.0.0'
+archivesBaseName = 'the_hollow'
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(17) }
+}
+
+minecraft { mappings channel: 'official', version: '1.20.1' }
+
+dependencies { minecraft 'net.minecraftforge:forge:1.20.1-47.2.0' }
+
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
